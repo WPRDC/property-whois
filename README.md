@@ -10,8 +10,8 @@ Request:
 Response:  
 ```json
 { 
-  "name": <the_owners_name>, 
-  "success": <true|false> 
+  "name": "<the_owners_name>", 
+  "success": "<true|false>" 
 } 
 ```  
 
