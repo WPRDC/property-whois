@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Property Whois</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"/>
 </head>
 <body>
-<h1>Property Whois</h1>
-<span>Programmatically find the name of a parcel's owner!</span>
-<hr>
-<h2>How To</h2>
-<h3>The call:</h3>
-<code>https://tools.wprdc.org/property_whois/whois/&lt;parcel_id&gt;</code>
-<h3>The result:</h3>
-<code>
-    { <br>
-    &nbsp;&nbsp;"name": &lt;the_owners_name&gt;, <br>
-    &nbsp;&nbsp;"success": &lt;true|false&gt; <br>
-    } <br>
-</code>
-<hr>
-<h2>Example</h2>
-<h3>This call:</h3>
-<code>https://tools.wprdc.org/property_whois/whois/0028F00194000000/</code>
+<h1 id="propetywhois">Propety Whois</h1>
 
-<h3>Returns:</h3>
-<code>
-    { <br>
-    &nbsp;&nbsp;"name": "UNIVERSITY OF PITTSBURGH OF THE COMMONWEALTH SYSTEM OF HIGHER EDUCATION", <br>
-    &nbsp;&nbsp;"success": true <br>
-    }
-</code>
+<p>Programmatically find the name of a parcel's owner!</p>
 
-</body>
+<h2 id="howto">How To</h2>
+
+<p>Request: <br/>
+    <code>GET https://tools.wprdc.org/property_whois/whois/&lt;parcel_id&gt;</code> <br/>
+    Response: </p>
+
+<pre><code class="json language-json">{
+  "name": &lt;the_owners_name&gt;,
+  "success": &lt;true|false&gt;
+}
+</code></pre>
+
+<p></p>
+
+<h2 id="example">Example</h2>
+
+<p>Request: <br/>
+    <code>GET https://tools.wprdc.org/property_whois/whois/0028F00194000000/</code> <br/>
+    Response: </p>
+
+<pre><code class="json language-json">{
+  "name": "UNIVERSITY OF PITTSBURGH OF THE COMMONWEALTH SYSTEM OF HIGHER EDUCATION",
+  "success": true
+}
+</code></pre>
+
+<p></p></body>
 </html>

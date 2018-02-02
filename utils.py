@@ -2,9 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 
 
-URL_TEMPLATE = 'http://www2.county.allegheny.pa.us/RealEstate/GeneralInfo.aspx?ParcelID='
+
 
 def get_owner_name(parcel_id):
+    URL_TEMPLATE = 'http://www2.county.allegheny.pa.us/RealEstate/GeneralInfo.aspx?ParcelID='
     print(parcel_id)
     owner_name = ''
     r = requests.get(URL_TEMPLATE+parcel_id);
